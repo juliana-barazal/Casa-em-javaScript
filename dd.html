@@ -1,0 +1,84 @@
+<DOCTYPE html>
+    <body>
+        <canvas id="design" width="1024" height="768" style="border: 1px solid #000;">
+        Este é um canvas
+        </canvas>
+
+        <script>
+            var c = document.getElementById("design");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#add8e6";
+            ctx.strokeStyle = "#add8e6";
+
+            //x, y, width, height
+            ctx.fillRect(112, 400, 800, 340);
+            ctx.stroke();
+
+            //janelas
+            ctx.fillRect(160, 444, 180,120);
+            ctx.fillStyle = "blue";
+            ctx.fill();
+
+
+           //topo da casa - triângulo.
+            ctx.beginPath();
+            ctx.moveTo(112,400);
+            ctx.lineTo(512,200);
+            ctx.lineTo(912,400);
+            ctx.lineTo(112,400);
+            ctx.stroke();
+            ctx.fill();
+
+            //telhado
+            ctx.beginPath();
+            ctx.moveTo(55,428); //início lado esquerdo
+            ctx.lineTo(112,400); //inicio azul esquerda
+            ctx.lineTo(512,200); //meio
+            ctx.lineTo(912,400); //inicio azul direita
+            ctx.lineTo(970,428); //fim linha preta direita parte de baixo
+            ctx.lineTo(980,408); //parte de cima preta direita
+            ctx.lineTo(512,170); //topo do telhado
+            ctx.lineTo(45,408); //parte de cima preta esquerda
+            ctx.lineTo(55,428); //união parte de cima com lado esquerdo
+            ctx.strokeStyle="black";
+            ctx.stroke();
+
+
+            
+
+
+
+
+            // ctx.beginPath();
+            // ctx.strokeStyle = "black";
+            // ctx.moveTo(30,120);
+            // ctx. 
+            // ctx.lineTo(150,50);
+            // ctx.stroke();
+           
+            
+         
+        
+            
+
+        </script>
+     </body>
+
+
+
+
+</html>
+
+<!-- ctx.fillStyle = "blue";
+ctx.fillRect(150,10,100,35);
+
+ctx.strokeStyle = "purple";
+ctx.lineWidth = 20;
+ctx.strokeRect(5,5,290,190);
+
+
+ctx.strokeStyle= "blue";
+ctx.beginPath();
+ctx.moveTo(20,75);
+ctx.lineTo(20,100)
+ctx.stroke(); -->
