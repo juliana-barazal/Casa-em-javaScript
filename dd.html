@@ -7,25 +7,21 @@
         <script>
             var c = document.getElementById("design");
             var ctx = c.getContext("2d");
+            ctx.lineWidth = 3;
             ctx.fillStyle = "#add8e6";
-            ctx.strokeStyle = "#add8e6";
+            ctx.strokeStyle = "add8e6";
 
             //x, y, width, height
             ctx.fillRect(112, 400, 800, 340);
-            ctx.stroke();
+           
 
-            //janelas
-            ctx.fillRect(160, 444, 180,120);
-            ctx.fillStyle = "blue";
-            ctx.fill();
-
-
-           //topo da casa - triângulo.
+            //topo da casa - triângulo.
             ctx.beginPath();
             ctx.moveTo(112,400);
             ctx.lineTo(512,200);
             ctx.lineTo(912,400);
             ctx.lineTo(112,400);
+            ctx.strokeStyle = "#add8e6";
             ctx.stroke();
             ctx.fill();
 
@@ -42,23 +38,55 @@
             ctx.lineTo(55,428); //união parte de cima com lado esquerdo
             ctx.strokeStyle="black";
             ctx.stroke();
+            ctx.fillStyle="#aaa0a0";
+            ctx.fill();
 
+            //janela esquerda         
+            ctx.strokeStyle = "blue";
+            ctx.strokeRect(182, 460, 160,120);
+            ctx.stroke();
+            ctx.moveTo(182, 520);
+            ctx.lineTo (342,520);
+            ctx.moveTo(262,460);
+            ctx.lineTo (262,580);
 
-            
+            //janela direita
+            ctx.strokeRect(662, 460, 160,120);
+            ctx.stroke();
+            ctx.moveTo(662, 520);
+            ctx.lineTo(822,520);
+            ctx.moveTo(742, 460);
+            ctx.lineTo (742,580);
 
+            //janela do meio
+            ctx.strokeRect(432, 300, 160,120);
+            ctx.stroke();
+            ctx.moveTo(432,360);
+            ctx.lineTo(592,360);
+            ctx.moveTo(512,300);
+            ctx.lineTo (512,420);
 
+            //porta
+            ctx.strokeRect(442, 492, 140, 250);
+            ctx.stroke();
+            ctx.clearRect(439,739,146,250);
+            ctx.arc(450, 864,120,100,150,anticlockwise);
 
+            //maçaneta
+            ctx.beginPath();
+            ctx.arc(480, 617, 12, 0, 2*Math.PI);
+            ctx.stroke();
 
-            // ctx.beginPath();
-            // ctx.strokeStyle = "black";
-            // ctx.moveTo(30,120);
-            // ctx. 
-            // ctx.lineTo(150,50);
-            // ctx.stroke();
-           
-            
-         
-        
+            //chaminé
+            ctx.beginPath;
+            ctx.moveTo(530, 200);
+            ctx.lineTo(530, 140),
+            ctx.lineTo(580, 140);
+            ctx.lineTo(580, 220);
+            ctx.strokeStyle="black";
+            ctx.stroke();
+            ctx.fillStyle="black";
+            ctx.fill();
             
 
         </script>
