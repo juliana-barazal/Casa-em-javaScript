@@ -1,3 +1,4 @@
+
 <DOCTYPE html>
     <body>
         <canvas id="design" width="1024" height="768" style="border: 1px solid #000;">
@@ -8,12 +9,21 @@
             var c = document.getElementById("design");
             var ctx = c.getContext("2d");
             ctx.lineWidth = 3;
-            ctx.fillStyle = "#ccf";
-            
 
             //x, y, width, height
             ctx.fillRect(112, 400, 800, 340);
             
+            //topo da casa - triângulo.
+            ctx.beginPath();
+            ctx.moveTo(112,400);
+            ctx.lineTo(512,200);
+            ctx.lineTo(912,400);
+            ctx.lineTo(112,400);
+            ctx.strokeStyle = "#97f";
+            ctx.stroke();
+            ctx.fillStyle = "#97f";
+            ctx.fill();
+
             //contorno casa
             ctx.beginPath();
             ctx.moveTo(112,400);
@@ -22,17 +32,11 @@
             ctx.lineTo(912,400);
             ctx.strokeStyle="black";
             ctx.stroke();
-
-            //topo da casa - triângulo.
-            ctx.beginPath();
-            ctx.moveTo(112,400);
-            ctx.lineTo(512,200);
-            ctx.lineTo(912,400);
-            ctx.lineTo(112,400);
+            ctx.fillStyle = "#97f";
             ctx.fill();
 
             //telhado
-            ctx.beginPath();
+            ctx.beginPath();        
             ctx.moveTo(55,428); //início lado esquerdo
             ctx.lineTo(112,400); //inicio azul esquerda
             ctx.lineTo(512,200); //meio
@@ -42,20 +46,25 @@
             ctx.lineTo(512,170); //topo do telhado
             ctx.lineTo(45,408); //parte de cima preta esquerda
             ctx.lineTo(55,428); //união parte de cima com lado esquerdo
-            ctx.fillStyle="#aaa0a0";
-            ctx.fill();
             ctx.stroke();
-
-            //janela esquerda         
+            ctx.fillStyle="#D2B48C";
+            ctx.fill();
+            
+            //janela esquerda  
+            ctx.fillStyle="#B0E0E6";       
+            ctx.fillRect(182, 460, 160,120);
             ctx.strokeRect(182, 460, 160,120);
+            ctx.stroke();
             ctx.beginPath();
             ctx.moveTo(182, 520);
             ctx.lineTo (342,520);
             ctx.moveTo(262,460);
             ctx.lineTo (262,580);
             ctx.stroke();
+           
 
             //janela do meio
+            ctx.fillRect(432, 300, 160,120);
             ctx.strokeRect(432, 300, 160,120);
             ctx.beginPath();
             ctx.moveTo(432,360);
@@ -63,8 +72,10 @@
             ctx.moveTo(512,300);
             ctx.lineTo (512,420);
             ctx.stroke();
+            ctx.fill();
 
-             //janela direita
+            //janela direita
+            ctx.fillRect(662, 460, 160,120);
             ctx.strokeRect(662, 460, 160,120);
             ctx.beginPath();
             ctx.moveTo(662, 520);
@@ -82,12 +93,14 @@
             ctx.lineTo(786, 209);
             ctx.lineTo(786, 309);
             ctx.lineTo (706,269);
-            ctx.fillStyle="purple";
+            ctx.fillStyle="#8A2BE2";
             ctx.fill();
             ctx.stroke();
             
 
             //porta
+            ctx.fillStyle="#C9C";
+            ctx.fillRect(442, 492, 140, 250);
             ctx.strokeRect(442, 492, 140, 250);
             ctx.clearRect(439,742,146,3); 
 
@@ -95,9 +108,11 @@
             ctx.beginPath();
             ctx.arc(462, 617, 10, 0, 2*Math.PI);
             ctx.stroke();
-            ctx.fillStyle="purple";
+            ctx.fillStyle="#EEE8AA";
             ctx.fill();
     
+
+           
         </script>
      </body>
 
